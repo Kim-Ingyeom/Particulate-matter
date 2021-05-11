@@ -24,10 +24,10 @@ for i in ap:
     if ap.index(i)%7 == 6:
         o3.append(i)
 print('당진, 일산, 동해바이오, 울산, 호남')
-print(pm)
-print(upm)
-print(co)
-print(o3)
+print('미세먼지',pm)
+print('초 미세먼지',upm)
+print('일산화 탄소',co)
+print('오존',o3)
 
 
 
