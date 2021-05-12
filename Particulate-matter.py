@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-import re
+import matplotlib.pyplot as plt
 
 page = requests.get('https://ewp.co.kr/kor/subpage/contents.asp?cn=K5VCI0HG&ln=NW3SBGVH&sb=9V62CFIE&tb=YXCJEDX&taborder',verify=False)
 soup = BeautifulSoup(page.content,'html.parser')
@@ -29,7 +29,11 @@ print('초 미세먼지',upm)
 print('일산화 탄소',co)
 print('오존',o3)
 
-
-
-
-
+region = ['dangjin','ilsan','donghae','ulsan','honam']
+x = [1,2,3,4,5]
+plt.plot(x, pm)
+plt.plot(x, upm)
+plt.plot(x, co)
+plt.plot(x, o3)
+plt.xticks(x,region)
+plt.show()
